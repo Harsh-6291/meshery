@@ -1,3 +1,8 @@
+// ...existing code...
+import React, { useState } from 'react';
+import _ from 'lodash';
+import rehypeSanitize from 'rehype-sanitize';
+
 import {
   Avatar,
   Box,
@@ -16,9 +21,7 @@ import {
   styled,
   useTheme,
 } from '@sistent/sistent';
-import React, { useState } from 'react';
-import _ from 'lodash';
-import rehypeSanitize from 'rehype-sanitize';
+
 import { Lock, Public } from '@mui/icons-material';
 import { useGetViewQuery, useUpdateViewVisibilityMutation } from '@/rtk-query/view';
 import { useGetLoggedInUserQuery, useGetUserProfileSummaryByIdQuery } from '@/rtk-query/user';

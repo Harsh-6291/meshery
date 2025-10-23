@@ -1,14 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { NoSsr } from '@sistent/sistent';
 import moment from 'moment';
-import OpenInNewIcon from '@mui/icons-material/OpenInNewOutlined';
-import WarningIcon from '@mui/icons-material/Warning';
-import CachedIcon from '@mui/icons-material/Cached';
 import dataFetch from '../../../lib/data-fetch';
 import GrafanaCustomGaugeChart from './GrafanaCustomGaugeChart';
 import bb, { area, line } from 'billboard.js';
+import grafanaDateRangeToDate from './helper';
+import { updateProgress } from '@/store/slices/mesheryUi';
+
+import OpenInNewIcon from '@mui/icons-material/OpenInNewOutlined';
+import WarningIcon from '@mui/icons-material/Warning';
+import CachedIcon from '@mui/icons-material/Cached';
+
 import {
+  NoSsr,
   IconButton,
   Card,
   CardContent,
@@ -18,8 +22,6 @@ import {
   styled,
   LinearProgress,
 } from '@sistent/sistent';
-import grafanaDateRangeToDate from './helper';
-import { updateProgress } from '@/store/slices/mesheryUi';
 
 const StyledCard = styled(Card)(() => ({
   height: '100%',

@@ -1,17 +1,17 @@
 import React, { useRef, useState } from 'react';
 import { NoSsr, ErrorBoundary, AppBar } from '@sistent/sistent';
+import { useRouter } from 'next/router';
 import Modal from '../General/Modals/Modal';
 import { ConnectionIconText, ConnectionTab, ConnectionTabs } from './styles';
+import ConnectionTable from './ConnectionTable';
 import MeshSyncTable from './meshSync';
 import ConnectionIcon from '../../assets/icons/Connection';
 import MeshsyncIcon from '../../assets/icons/Meshsync';
 import CAN from '@/utils/can';
 import { keys } from '@/utils/permission_constants';
-import DefaultError from '../General/error-404/index';
-import { useGetSchemaQuery } from '@/rtk-query/schema';
+import DefaultError from '../General/error-404';
 import CustomErrorFallback from '../General/ErrorBoundary';
-import ConnectionTable from './ConnectionTable';
-import { useRouter } from 'next/router';
+import { useGetSchemaQuery } from '@/rtk-query/schema';
 
 /**
  * Parent Component for Connection Component

@@ -1,5 +1,19 @@
+
 import React, { useEffect, useRef, useState } from 'react';
-import { Tooltip, Grid2, FormControl, MenuItem, Table, FormattedTime, CustomColumnVisibilityControl, ResponsiveDataTable, SearchBar, UniversalFilter, TableCell, TableRow } from '@sistent/sistent';
+import {
+  Tooltip,
+  Grid2,
+  FormControl,
+  MenuItem,
+  Table,
+  TableCell,
+  TableRow,
+  FormattedTime,
+  CustomColumnVisibilityControl,
+  ResponsiveDataTable,
+  SearchBar,
+  UniversalFilter,
+} from '@sistent/sistent';
 import { useNotification } from '../../../utils/hooks/useNotification';
 import { EVENT_TYPES } from '../../../lib/event-types';
 import { MeshSyncDataFormatter } from '../metadata';

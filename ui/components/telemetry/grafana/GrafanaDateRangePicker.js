@@ -16,10 +16,9 @@ import {
   styled,
 } from '@sistent/sistent';
 import Moment from 'react-moment';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PropTypes from 'prop-types';
 import MesheryDateTimePicker from '../../MesheryDateTimePicker';
-import { Close } from '@mui/icons-material';
+import { AccessTime as AccessTimeIcon, Close as CloseRaw } from '@mui/icons-material';
 
 const StyledDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -41,13 +40,14 @@ const CloseIconButton = styled(IconButton)(() => ({
   color: 'white',
 }));
 
-const CloseIcon = styled(Close)({
+const CloseIcon = styled(CloseRaw)({
   transform: 'rotate(-90deg)',
   '&:hover': {
     transform: 'rotate(90deg)',
     transition: 'all .3s ease-in',
   },
 });
+
 
 const RangeButton = styled(Button)(() => ({
   border: '1px solid rgba(0, 0, 0, 0.23)',
